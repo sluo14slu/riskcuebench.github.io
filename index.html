@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
 <meta name="description"
-      content="RiskCueBench: A benchmark for evaluating video-language models on risk cue recognition in safety-critical videos.">
+      content="RiskCueBench: Benchmarking Anticipatory Reasoning from Early Risk Cues in Video-Language Models">
 <meta name="keywords" content="RiskCueBench, Video-Language Models, Risk cues, Safety, Benchmark">
 <title>RiskCueBench</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RiskCueBench: A benchmark for evaluating video-language models on risk cue recognition in safety-critical videos</title>
+  <title>RiskCueBench: Benchmarking Anticipatory Reasoning from Early Risk Cues in Video-Language Models</title>
 
   
 
@@ -183,27 +183,41 @@
     <h2 class="title is-3">Highlights</h2>
 
     <div class="content">
-      <ul>
+      <ul class="highlights-list">
         <li>
-          <strong>Early Risk Focus.</strong>
-          RiskCueBench evaluates models on <em>risk signals</em>—the earliest observable cues that precede safety-critical events—rather than on already obvious accidents.
+          <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <strong>Early Risk Signal Benchmark.</strong>
+          RiskCueBench evaluates anticipatory reasoning from <em>risk signal clips</em>—the earliest moments that indicate a potential safety concern—rather than post-hoc access to the full incident.
         </li>
+
         <li>
-          <strong>Observable-Only Annotations.</strong>
-          All labels are grounded in concrete, visually observable evidence, avoiding inferred intent, emotion, or outcome.
+          <span class="icon"><i class="fas fa-video"></i></span>
+          <strong>Real-World, Multi-Domain Data.</strong>
+          Expert-annotated videos spanning <strong>traffic incidents</strong> and <strong>protests</strong>, with timestamps for signal boundaries and structured descriptions of visual indicators.
         </li>
+
         <li>
-          <strong>Multi-Domain Coverage.</strong>
-          The benchmark spans distinct safety-relevant domains, including traffic incidents and public protests.
+          <span class="icon"><i class="fas fa-filter"></i></span>
+          <strong>Scalable Construction Pipeline.</strong>
+          A reproducible workflow combining structured event queries, LLM-based relevance and visual-quality filtering, and disagreement-based hard-example mining to surface ambiguous cases.
         </li>
+
         <li>
-          <strong>Challenging Benchmark.</strong>
-          Across strong video-language models, we observe a substantial performance gap in anticipating future risk from evolving visual input.
+          <span class="icon"><i class="fas fa-brain"></i></span>
+          <strong>QRA Evaluation + Reasoning Diagnostics.</strong>
+          Models respond in a Question–Reasoning–Answer format and are evaluated beyond F1 using metrics for <strong>reasoning grounding</strong>, <strong>temporal sensitivity</strong>, and <strong>self-correction effects</strong>.
+        </li>
+
+        <li>
+          <span class="icon"><i class="fas fa-chart-line"></i></span>
+          <strong>Key Findings.</strong>
+          Current VLMs lag far behind humans, perform markedly worse on protests than car crashes, show limited reliance on temporal order, and often produce poorly grounded explanations; self-correction frequently <em>reduces</em> accuracy.
         </li>
       </ul>
     </div>
   </div>
 </div>
+
 <!-- /Paper Highlights -->
 
 
