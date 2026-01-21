@@ -1,0 +1,48 @@
+\begin{figure*}[t]
+% Remove \hrule from here
+
+\subsection{Representative Failure Cases}
+\label{sec:qualitative_cases}
+\hrule % Place the line under the title instead
+\vspace{1.5em}
+
+We present representative failure cases from Gemini to illustrate how perceptual and reasoning errors manifest in practice. These examples are selected from the car-crash domain and are intended to highlight common patterns rather than exhaustively enumerate all error types.
+
+\begin{multicols}{2}
+\paragraph{Perceptual Errors}\mbox{}\\
+\textbf{Case 1: Snow-caused loss of control misperceived as a normal intersection.} \\ 
+\textit{Annotation.} ``First, a black car on the opposing lane slips on snow, then it drifts out of control.''  \\
+\textit{Model output.} Gemini describes a routine urban intersection with functioning traffic lights and a yellow taxi.   
+\textit{Diagnosis.} The model fails to indicate the hazardous road condition of snow and the resulting loss of traction, instead substituting an unrelated scene with different objects and traffic structure. The core visual indicators are entirely absent from the model’s perception.
+
+\textbf{Case 2: Wrong-way driving replaced by an empty parking garage.}\\
+\textit{Annotation.} ``First, the car in front drives in the opposing direction, then it continues into the driver’s lane.''  \\
+\textit{Model output.} The model describes an empty underground parking garage with no moving vehicles. \\ 
+\textit{Diagnosis.} The active roadway, opposing traffic flow, and dynamic agents are replaced by a static and unrelated environment.
+
+\paragraph{Reasoning Errors}\mbox{}\\
+\textbf{Case 3: ``No collision yet'' interpreted as no risk.  }\\
+\textit{Annotation.} ``The white car in front brakes suddenly while the ego vehicle is still approaching.'' \\ 
+\textit{Model output.} Gemini concludes that no risk is present because traffic lights are functioning and no crash is visible.  \\
+\textit{Diagnosis.} Although the sudden braking event is acknowledged, the model incorrectly equates the absence of an observed collision with safety, ignoring the temporal consequence of risk.
+
+\textbf{Case 4: Normal lane change framed as risky via hypothetical hazards. \\}
+\textit{Annotation.} ``Ego vehicle changes to the right lane at normal speed.'' \\ 
+\textit{Model output.} The model predicts risk by invoking slippery roads or poor weather conditions not observed.  \\
+\textit{Diagnosis.} The model introduces speculative weather hazards instead of reasoning based on the described driving behavior, applying a generic safety heuristic without causal grounding of visual indicators in the video.
+
+\paragraph{Conclusion Errors}\mbox{}\\
+\textbf{Case 5: Collision labeled as no risk.} \\ 
+\textit{Annotation.} ``First, a black car in front signals left and turns, at the same time it does not yield to the ego vehicle.''  \\
+\textit{Model output.} Gemini predicts no risk. \\ 
+\textit{Diagnosis.} The cars collide after the signal, while the model assigns a negative risk label.
+
+\textbf{Case 6: Benign stop at red light labeled as risky.}  \\
+\textit{Annotation.} ``During the red light, vehicles are waiting, and vehicles going straight from the right intersection are moving at normal speed the whole time.''  \\
+\textit{Model output.} Gemini predicts a risk. \\ 
+\textit{Diagnosis.} The model incorrectly flags a compliant and stationary driving scenario as risky.
+\end{multicols}
+
+\vspace{1em}
+\hrule
+\end{figure*}
