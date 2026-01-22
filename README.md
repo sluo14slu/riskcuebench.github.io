@@ -36,7 +36,7 @@ See the paper for full metric definitions.
 ## Resources
 
 -  Dataset : Hugging Face
-  https://huggingface.co/datasets/slu083/RiskCueBench
+ https://huggingface.co/datasets/Yogesh914/RiskCueBench
 
 -  Code :
   https://github.com/kaipingchen/multimodal-risk
