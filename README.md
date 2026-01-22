@@ -38,8 +38,8 @@ See the paper for full metric definitions.
 -  Dataset : Hugging Face
   https://huggingface.co/datasets/slu083/RiskCueBench
 
--  Evaluation code :
-  https://github.com/slu014slu/riskcuebench
+-  Code :
+  [https://github.com/slu014slu/riskcuebench](https://github.com/kaipingchen/multimodal-risk)
 
 
 ## Citation
