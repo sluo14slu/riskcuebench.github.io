@@ -39,7 +39,7 @@ See the paper for full metric definitions.
   https://huggingface.co/datasets/slu083/RiskCueBench
 
 -  Code :
-  [https://github.com/slu014slu/riskcuebench](https://github.com/kaipingchen/multimodal-risk)
+  https://github.com/kaipingchen/multimodal-risk
 
 
 ## Citation
