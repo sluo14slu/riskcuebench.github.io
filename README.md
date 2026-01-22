@@ -46,7 +46,7 @@ See the paper for full metric definitions.
 ```bibtex
 @article{riskcuebench2026,
   title={RiskCueBench: Benchmarking Anticipatory Reasoning from Early Risk Cues in Video-Language Models},
-  author={...},
+  author={Sha Luo, Yogesh Prabhu,Timothy Ossowski,Kaiping Chen,Junjie Hu},
   journal={ACL Rolling Review},
   year={2026}
 }
